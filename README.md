@@ -1,16 +1,59 @@
-# React + Vite
+# 🎮 Gamepedia - React SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-Currently, two official plugins are available:
+A modern video game encyclopedia application that consumes real-time data from the **RAWG API**. Developed as part of the **Frontend II** course.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Real-time API Consumption:** Dynamic listing of popular games worldwide.
+- **SPA Navigation:** Seamless transitions without page reloads using `react-router-dom`.
+- **Glassmorphism Design:** Modern interface featuring frosted glass effects and a fully responsive layout.
+- **Favorites System:** Data persistence using the browser's `localStorage`.
+- **Security:** API Key management via environment variables (`.env`).
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 18** & **Vite** (Build tool and development environment)
+- **React Router v6** (Dynamic routing)
+- **Modern CSS** (Grid, Flexbox, Backdrop-filter)
+- **Fetch API** (Asynchronous requests with Async/Await)
+
+---
+
+## 📦 Installation and Setup
+
+Follow these steps to run the project locally:
+
+### 1. Clone the repository
+```bash
+git clone [https://github.com/AlvinSanchezO/gamepedia-react.git](https://github.com/AlvinSanchezO/gamepedia-react.git)
+cd gamepedia-react
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Configure the API Key
+```bash
+VITE_RAWG_API_KEY=your_api_key_here
+```
+
+### 4. Start the development server
+```bash
+npm run dev
+```
+
+### 📂 Project Structure
+src/
+ ├── components/       # Reusable components (Navbar, GameCard)
+ ├── pages/            # Main views (Home, Details, Favorites)
+ ├── App.jsx           # Route configuration
+ ├── main.jsx          # React entry point
+ └── index.css         # Global styles and Glassmorphism effects
