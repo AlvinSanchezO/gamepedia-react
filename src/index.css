@@ -1,0 +1,236 @@
+/* =========================================
+   ESTILOS GLOBALES - GAMEPEDIA (GLASSMORPHISM)
+   ========================================= */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* Gradiente de fondo moderno y profundo */
+    background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+    background-attachment: fixed; /* Evita que el fondo se mueva al hacer scroll */
+    color: #f4f6f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    color: #ffffff;
+}
+
+/* --- ESTILOS DEL NAVBAR (EFECTO CRISTAL) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    
+    /* Fondo semitransparente */
+    background: rgba(255, 255, 255, 0.05);
+    
+    /* Efecto de desenfoque de vidrio */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* Borde sutil para simular el borde del cristal */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    
+    /* Mantiene el Navbar fijo en la parte superior */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8b93ff;
+    text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #8b93ff;
+}
+
+/* --- ESTILOS DE LA CUADRÍCULA (GRID) --- */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* --- ESTILOS DE LA TARJETA (EFECTO CRISTAL) --- */
+.game-card {
+    display: flex;
+    flex-direction: column;
+    
+    /* Fondo semitransparente */
+    background: rgba(255, 255, 255, 0.05);
+    
+    /* Efecto de desenfoque */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Bordes y sombras del cristal */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    /* Se ilumina ligeramente al pasar el cursor */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.game-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.game-title {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.game-rating {
+    margin-top: auto;
+    font-weight: 600;
+    color: #fbbf24; /* Amarillo más brillante para contrastar con el fondo oscuro */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* --- ESTILOS DE ESTADO (LOADING / ERROR) --- */
+.state-message {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.error-text {
+    color: #ef4444;
+}
+/* =========================================
+   ESTILOS DE LA PÁGINA DE DETALLES
+   ========================================= */
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #8b93ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-5px); /* Efecto sutil de movimiento a la izquierda */
+}
+
+.game-details-card {
+    /* Mismo efecto de cristal que tus otras tarjetas */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.details-image {
+    width: 100%;
+    max-height: 400px; /* Limitamos la altura para que no ocupe toda la pantalla */
+    object-fit: cover;
+    object-position: top; /* Asegura que veamos la parte superior de la imagen */
+}
+
+.details-info {
+    padding: 30px;
+}
+
+.details-title {
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    color: #ffffff;
+}
+
+.details-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #fbbf24;
+    font-weight: bold;
+}
+
+.details-description {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    white-space: pre-line; /* Respeta los saltos de línea del texto original */
+}
+
+/* --- ESTILO DEL BOTÓN DE FAVORITOS --- */
+.fav-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.fav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.fav-button.active {
+    background: rgba(239, 68, 68, 0.2); /* Un fondo rojizo suave si está activo */
+    border-color: #ef4444;
+    color: #fca5a5;
+}
