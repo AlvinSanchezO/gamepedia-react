@@ -51,8 +51,6 @@ npm run dev
 ```
 
 ### 📂 Project Structure
-## 📂 Project Structure
-
 ```text
 src/
  ├── components/       # Reusable components (Navbar, GameCard)
